@@ -1,0 +1,67 @@
+
+<p>
+  c1 works!
+</p>
+<div> Months :
+    <select (change)="changemonths($event)">
+       <option *ngFor="let i of months">{{i}}</option>
+    </select>
+  </div>
+  <br/>
+
+
+  <div>
+    <button (click)="myClickFunction($event)">
+      Click Me
+   </button>
+  </div>
+
+<div>
+  <input type="text" placeholder="First Name" id="Fname" [(ngModel)]= "Fname" (change)="changetext($event)">
+  <input type="text" placeholder="First Name" value="name is {{Fname}}">
+</div>
+
+<ul>
+  <li *ngFor="let item of arr1;">{{item}}****</li>
+</ul>
+<br><br>
+
+<ul>
+  <li *ngFor="let item2 of arr2; let i= index;">{{i}}-->
+    <span *ngIf="(i%2)==0;else condition1" >Even</span><br><br>
+      <ng-template #condition1>Odd</ng-template>
+    <span *ngFor="let item3 of arr2[i];let in=index ">
+      Index of number {{item3}} is {{in}}-->
+      <span *ngIf="(in%2)==0;else condition1" >Even</span>
+      <ng-template #condition1>Odd</ng-template>
+      <br>
+    </span><br>
+  </li>
+</ul>
+
+<ul>
+  <li *ngFor="let item2 of emp;">Name={{item2.name}} and id={{item2.id}}</li>
+</ul>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+          <th>Firstname</th>
+          <th>id</th>
+        </tr>
+      </thead>
+      <tr *ngFor="let item2 of emp;">
+        <td>{{item2.name}}</td>
+        <td>{{item2.id}}</td>
+      </tr>
+      </table>
+
+      <button (click)="count($event)" >
+        <span [ngStyle]="{'background-color':(cnt>10 && cnt<15)?'green':'yellow',
+                          'background-color':(cnt>5)?'red':'blue'
+                          }">
+          Click
+        </span>
+      </button>
+      <br>
+      here count is {{cnt}}

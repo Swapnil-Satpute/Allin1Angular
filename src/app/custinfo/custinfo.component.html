@@ -1,0 +1,19 @@
+<div class="container">
+<h2 style=" color: blue;">Customer Informations</h2>
+  <div  class="row" Style="text-align:center;">
+  <div class=" col-md-4">
+      <a  [routerLink]="['/Custinfo/CustDetails']"><img src="../assets/detailofCust.png" style="width: 25px;">Customer Details</a>
+  </div>
+
+
+  <div class=" col-md-4">
+        <a  [routerLink]="['/Custinfo/CustOrder']">Customer Order</a>
+  </div>
+
+  <div class=" col-md-4">
+        <a  [routerLink]="['/Custinfo/EditCust']">Edit Customer</a>
+  </div>
+</div>
+</div>
+<br>
+<router-outlet></router-outlet>

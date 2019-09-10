@@ -1,0 +1,34 @@
+<div class="container">
+<div style="border: 1px solid black; width: 50%; padding: 40px; ">
+  <h2 style=" text-align: center; color: blue"> Welcome to Angular Test</h2>
+<b>{{Cques}}</b>
+<br><br>
+<span  *ngFor="let item of mcq">
+<input type="radio" name="test" [(ngModel)]="radioSelected" value="{{item}}">{{item}}<br>
+</span>
+<br>
+<p> Time Limit(60 Seconds)</p>
+<div class="row">
+<p>Time Left:</p>
+  <div class="progress" style="width: 50%; margin-top: 6px;" >
+        <div class="progress-bar" style.width.%="{{tcnt}}" ></div>
+  </div>
+</div>
+<br>
+
+<div class="row">
+  <div class="col-md-4">
+        <button (click)="SubmitTest()">Submit Test</button>
+  </div>
+
+  <div class="col-md-4">
+    <button (click)="Skip()" >Skip</button>
+  </div>
+  <div class="col-md-4">
+    <button (click)="SubmitAnswer()" >Submit Answer</button>
+  </div>
+
+</div>
+
+</div>
+</div>

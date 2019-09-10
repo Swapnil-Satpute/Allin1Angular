@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-md bg-light">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a  class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/Custinfo']">Customer</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/Order']">Order</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" >About</a>
+      </li>
+  </ul>
+</nav>
+
+<router-outlet></router-outlet>
+
+<footer class="footer">
+  <div class="container">
+    <p class="text-muted">Place sticky footer content here.</p>
+  </div>
+</footer>

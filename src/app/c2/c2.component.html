@@ -1,0 +1,52 @@
+<p>
+  c2 works!
+</p>
+<div appAutoDirective color='blue'>on Mouse Over & on mouse exit events</div>
+ELections program<br>
+<div class="container">
+  <form>
+    <div class="row">
+      <div class=" col-md-6">
+         <input type="radio" name="gender" value="BJP"> BJP
+      </div>
+      <div class=" col-md-6">
+        <div class="progress">
+          <div class="progress-bar" style="width:50px"></div>
+        </div>
+      </div>
+    </div><br>
+    <div class="row">
+        <div class=" col-md-6">
+          <input type="radio" [(ngModel)]="vote" name="gender" value="NCP" ngModel> NCP
+        </div>
+        <div class=" col-md-6">
+            <div class="progress">
+              <div class="progress-bar" style="width:100px;"></div>
+            </div>
+        </div>
+    </div><br>
+    <div class="row">
+        <div class=" col-md-6">
+          <input type="radio" [(ngModel)]="vote" name="gender" value="SS" ngModel> SS
+        </div>
+        <div class=" col-md-6">
+            <div class="progress">
+              <div class="progress-bar" style="width:400px;"></div>
+            </div>
+        </div><br><br>
+    </div><div class="row">
+        <div class=" col-md-6">
+          <input type="radio" [(ngModel)]="vote" name="gender" value="Other" ngModel> Other
+        </div>
+        <div class=" col-md-6">
+            <div class="progress">
+              <div class="progress-bar" style="width:300px;"></div>
+            </div>
+        </div>
+    </div>
+<br><br>
+<button (click)="Votecal($event)">
+  Submit
+</button>
+</form>
+</div>
